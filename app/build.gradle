@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
     defaultConfig {
-        applicationId "com.xujun.qqdemo"
+        applicationId "com.xujun.qq"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
