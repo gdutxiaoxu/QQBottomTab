@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_second_style"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+    <!--用来填充Fragemnt的ViewPager-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+    <!--使用RadioGroup来实现tab的切换-->
+    <RadioGroup
+
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+    >
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/bottom_tab"
+            android:drawableTop="@drawable/sel_home"
+            android:text="首页"/>
+
+        <RadioButton
+            android:id="@+id/rb_course"
+            style="@style/bottom_tab"
+            android:drawableTop="@drawable/sel_course"
+            android:text="课程"/>
+
+        <RadioButton
+            android:id="@+id/rb_direct_seeding"
+            style="@style/bottom_tab"
+            android:drawableTop="@drawable/sel_direct_seeding"
+            android:text="直播"/>
+
+        <RadioButton
+            android:id="@+id/rb_me"
+            style="@style/bottom_tab"
+            android:drawableTop="@drawable/sel_me"
+            android:text="我的"/>
+
+    </RadioGroup>
+
+</LinearLayout>
