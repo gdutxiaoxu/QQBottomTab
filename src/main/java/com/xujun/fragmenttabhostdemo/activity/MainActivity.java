@@ -1,10 +1,12 @@
-package com.xujun.fragmenttabhostdemo;
+package com.xujun.fragmenttabhostdemo.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.xujun.fragmenttabhostdemo.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.btn_third_style:
                 jump(ThreeActivity.class);
+                break;
+
+            case R.id.btn_four_style:
+                jump(FourActivity.class);
                 break;
             default:
                 break;

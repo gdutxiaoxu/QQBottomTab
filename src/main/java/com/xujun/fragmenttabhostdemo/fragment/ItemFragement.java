@@ -1,9 +1,12 @@
-package com.xujun.fragmenttabhostdemo;
+package com.xujun.fragmenttabhostdemo.fragment;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import com.xujun.fragmenttabhostdemo.R;
+import com.xujun.fragmenttabhostdemo.base.BasePageFragment;
 
 /**
  * @ explain:

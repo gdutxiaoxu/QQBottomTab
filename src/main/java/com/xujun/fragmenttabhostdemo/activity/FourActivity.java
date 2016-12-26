@@ -1,4 +1,4 @@
-package com.xujun.fragmenttabhostdemo;
+package com.xujun.fragmenttabhostdemo.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,10 +9,15 @@ import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.xujun.fragmenttabhostdemo.CourseFragment;
+import com.xujun.fragmenttabhostdemo.LUtils;
+import com.xujun.fragmenttabhostdemo.R;
+import com.xujun.fragmenttabhostdemo.fragment.ItemFragement;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class ThreeActivity extends AppCompatActivity {
+public class FourActivity extends AppCompatActivity {
 
     FrameLayout mFl;
     RadioGroup mRg;
@@ -34,8 +39,15 @@ public class ThreeActivity extends AppCompatActivity {
         mRg = (RadioGroup) findViewById(R.id.rg);
         mFragments = new ArrayList<>();
         for (int i = 0; i < mTiltles.length; i++) {
-            ItemFragement itemFragement = ItemFragement.newInstance(mTiltles[i]);
-            mFragments.add(itemFragement);
+
+            if(i==1){
+                CourseFragment courseFragment = new CourseFragment();
+                mFragments.add(courseFragment);
+            }else{
+                ItemFragement itemFragement = ItemFragement.newInstance(mTiltles[i]);
+                mFragments.add(itemFragement);
+            }
+
         }
         mCurFragment = mFragments.get(position);
         replaceFragment(mCurFragment);

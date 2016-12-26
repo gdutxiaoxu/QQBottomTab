@@ -1,4 +1,4 @@
-package com.xujun.fragmenttabhostdemo;
+package com.xujun.fragmenttabhostdemo.activity;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -10,6 +10,10 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 import android.widget.TextView;
+
+import com.xujun.fragmenttabhostdemo.FragmentInfo;
+import com.xujun.fragmenttabhostdemo.MainFragmentFactory;
+import com.xujun.fragmenttabhostdemo.R;
 
 import java.util.List;
 

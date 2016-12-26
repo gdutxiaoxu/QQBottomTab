@@ -1,4 +1,4 @@
-package com.xujun.fragmenttabhostdemo;
+package com.xujun.fragmenttabhostdemo.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,6 +6,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import com.xujun.fragmenttabhostdemo.fragment.ItemFragement;
+import com.xujun.fragmenttabhostdemo.R;
+import com.xujun.fragmenttabhostdemo.base.BaseFragmentAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

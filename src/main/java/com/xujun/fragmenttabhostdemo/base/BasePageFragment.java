@@ -1,4 +1,4 @@
-package com.xujun.fragmenttabhostdemo;
+package com.xujun.fragmenttabhostdemo.base;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.xujun.fragmenttabhostdemo.LUtils;
 
 /**
  * @ explain:
@@ -29,24 +31,25 @@ public abstract class BasePageFragment extends Fragment {
      * 表示数据是否初始化
      */
     protected boolean isDataInitiated;
-    private Context mContext;
+    protected Context mContext;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LUtils.i(getClass().getSimpleName() + ">>>>>>>>>>>　　onCreate");
+        mContext=getContext();
+        //        LUtils.i(getClass().getSimpleName() + ">>>>>>>>>>>　　onCreate");
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable
             Bundle savedInstanceState) {
-        LUtils.i(getClass().getSimpleName() + ">>>>>>>>>>>　　onCreateView");
+        //        LUtils.i(getClass().getSimpleName() + ">>>>>>>>>>>　　onCreateView");
         if (mView == null) {
             mContext = getContext();
             mView = View.inflate(mContext, getLayoutId(), null);
             initView(mView);
-            LUtils.i(getClass().getSimpleName() + ">>>>>>>>>>>　　initView");
+
         } else {
             // 缓存的rootView需要判断是否已经被加过parent，如果有parent需要从parent删除，
             // 要不然会发生这个rootview已经有parent的错误。
@@ -54,7 +57,7 @@ public abstract class BasePageFragment extends Fragment {
             if (parent != null) {
                 parent.removeView(mView);
             }
-            LUtils.i(getClass().getSimpleName() + ">>>>>>>>>>>　　removeView");
+
         }
         return mView;
     }
@@ -86,7 +89,6 @@ public abstract class BasePageFragment extends Fragment {
     }
 
     /***
-     *
      * @param forceUpdate 表示是否在界面可见的时候是否强制刷新数据
      * @return
      */
