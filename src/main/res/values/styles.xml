@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+  
+
+
+        /*  android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="新闻"
+        android:gravity="center"
+        android:textColor="@drawable/sel_bottom_tab_text"
+        android:padding="8dp"
+        android:button="@null"
+        android:drawableTop="@drawable/sel_news"*/
+        <style name="bottom_tab">
+            <item name="android:layout_width" >0dp</item>
+            <item name="android:layout_height" >wrap_content</item>
+            <item name="android:layout_weight" >1</item>
+            <item name="android:text" >0dp</item>
+            <item name="android:gravity" >center</item>
+            <item name="android:textColor" >@drawable/sel_bottom_tab_text</item>
+            <item name="android:padding" >8dp</item>
+            <item name="android:button" >@null</item>
+        </style>
+
+
+</resources>
