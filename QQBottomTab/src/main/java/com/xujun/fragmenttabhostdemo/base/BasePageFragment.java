@@ -111,4 +111,6 @@ public abstract class BasePageFragment extends Fragment {
     protected void initData() {
     }
 
+
+
 }

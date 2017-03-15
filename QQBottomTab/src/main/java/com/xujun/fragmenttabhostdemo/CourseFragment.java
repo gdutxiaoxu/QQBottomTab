@@ -6,6 +6,7 @@ import android.support.v4.view.PagerAdapter;
 import com.xujun.fragmenttabhostdemo.base.BaseFragmentAdapter;
 import com.xujun.fragmenttabhostdemo.base.BaseViewPagerFragment;
 import com.xujun.fragmenttabhostdemo.fragment.CourseListFragment;
+import com.xujun.fragmenttabhostdemo.fragment.CourseListFragmentWithHeadView;
 
 import java.util.ArrayList;
 
@@ -26,8 +27,16 @@ public class CourseFragment extends BaseViewPagerFragment {
         mFragments = new ArrayList<>();
         for(int i=0;i<mTitles.length;i++){
             String title=mTitles[i];
-            CourseListFragment courseListFragment = CourseListFragment.newInstance(title, i);
-            mFragments.add(courseListFragment);
+            if(i%2==0){
+                CourseListFragment courseListFragment = CourseListFragment.newInstance(title, i);
+                mFragments.add(courseListFragment);
+            }else{
+                CourseListFragmentWithHeadView courseListFragmentWithHeadView =
+                        CourseListFragmentWithHeadView.newInstance(title, i);
+                mFragments.add(courseListFragmentWithHeadView);
+            }
+
+
         }
 
         BaseFragmentAdapter adapter = new BaseFragmentAdapter(getChildFragmentManager

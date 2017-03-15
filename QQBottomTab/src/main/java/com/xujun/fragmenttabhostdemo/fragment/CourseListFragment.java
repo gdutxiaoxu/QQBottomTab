@@ -48,33 +48,6 @@ public class CourseListFragment extends BasePageFragment {
         LUtils.i(getClass().getSimpleName() + ">>>>>>>>>>>　　onCreate   mPosition="  +mPosition);
     }
 
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        LUtils.i(getClass().getSimpleName() + ">>>>>>>>>>>　　onCreateView   mPosition="  +mPosition);
-        return super.onCreateView(inflater, container, savedInstanceState);
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-
-        super.onActivityCreated(savedInstanceState);
-        LUtils.i(getClass().getSimpleName() + ">>>>>>>>>>>　　onActivityCreated   mPosition="  +mPosition);
-    }
-
-    @Override
-    public void onDestroyView() {
-
-        super.onDestroyView();
-        LUtils.i(getClass().getSimpleName() + ">>>>>>>>>>>　　onDestroyView   mPosition="  +mPosition);
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        LUtils.i(getClass().getSimpleName() + ">>>>>>>>>>>　　onDestroy   mPosition="  +mPosition);
-    }
-
     public static CourseListFragment newInstance(String title, int position){
         CourseListFragment courseListFragment = new CourseListFragment();
         Bundle bundle = new Bundle();
